@@ -1,7 +1,9 @@
 Database Backup Plugin
 ======================
 
-Engine style plugin which offers backup of database and files.
+Engine style plugin which allow a user (usually admin) to manually backup the database and files themselves. 
+
+It uses the connection details in database.yml.
 
 Create a routes like so:
 
