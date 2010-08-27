@@ -32,6 +32,7 @@ begin
     gemspec.homepage = "http://github.com/krisleech/backup_data"
     gemspec.authors = ["Kris Leech"]
   end
+  Jeweler::GemcutterTasks.new  
 rescue LoadError
   puts "Jeweler not available. Install it with: gem install jeweler"
 end
