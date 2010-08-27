@@ -1,0 +1,16 @@
+Database Backup Plugin
+======================
+
+Engine style plugin which offers backup of database and files.
+
+Create a routes like so:
+
+map.admin_backup_database '/admin/backup/database', :controller => 'admin/backups', :action => 'database'
+map.admin_backup_files '/admin/backup/files', :controller => 'admin/backups', :action => 'files'
+map.admin_backup '/admin/backup', :controller => 'admin/backups'
+
+The Admin::BackupsController inherits from Admin::AdminController, this may not fit with your app.
+
+However if you install this as a plugin this is easily changed.
+
+Copyright (c) 2010 Kris Leech, released under the MIT license

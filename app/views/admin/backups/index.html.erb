@@ -1,0 +1,19 @@
+
+
+<% form_tag admin_backup_database_path, :method => :post do %>
+  <p>Database: <%= submit_tag 'Backup' %></p>
+<% end %>
+
+<% form_tag admin_backup_files_path, :method => :post do %>
+  <input type="hidden" value="stylesheets" name="paths[]" />
+  <input type="hidden" value="javascripts" name="paths[]" />
+ <input type="hidden" value="js_and_css" name="filename" />
+  <p>Stylesheets and Javascript: <%= submit_tag 'Backup' %></p>
+  <% end %>
+  
+<% form_tag admin_backup_files_path, :method => :post do %>    
+    <input type="hidden" value="/" name="paths[]" />
+    <input type="hidden" value="everything" name="filename" />
+    <p>All files: <%= submit_tag 'Backup' %></p>
+    <small><%= File.size(File.join(RAILS_ROOT, 'public')) %> Kb</small>
+<% end %>
